@@ -23,7 +23,8 @@ import {MatSelectModule} from '@angular/material/select';
     FormsModule,
     MatIconModule,
     MatSelectModule,
-    MatTabsModule
+    MatTabsModule,
+    GaugeModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
