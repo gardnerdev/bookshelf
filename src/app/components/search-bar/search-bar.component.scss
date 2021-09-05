@@ -1,0 +1,11 @@
+.search {
+   &-container{
+     width: 100px; 
+     height: 60px;
+     background-color: #423a45;
+     display:flex; 
+     top: 0;
+     left: 0;
+     z-index: 4;
+   } 
+}
