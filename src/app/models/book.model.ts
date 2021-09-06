@@ -7,4 +7,5 @@ export class Book {
     starRating!: number;
     price!: number;
     pages!: number;
+    category!: string;
 }

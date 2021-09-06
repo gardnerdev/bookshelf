@@ -1,58 +1,3 @@
-<!--  <div class="filters"> 
-    <mat-form-field>
-        <mat-label>Sort</mat-label>
-        <mat-select
-            panelClass="sort-select"
-            [(ngModel)]="sort"
-        >
-            <mat-option value="name">Name</mat-option>
-            <mat-option value="-released">Released</mat-option>
-            <mat-option value="-added">Added</mat-option>
-            <mat-option value="-created">Created</mat-option>
-            <mat-option value="-updated">Updated</mat-option>
-            <mat-option value="-category">Category</mat-option>
-        </mat-select>
-    </mat-form-field>
-
-    <table class="table">
-        <thead>
-            <th>Id</th>
-            <th>Name</th>
-        </thead>
-        <div class="books">
-            <div class="book">
-                <tr *ngFor="let book of books">
-                    <div class="book-thumb-container">
-                        <img
-                            src="{{ book.imageUrl }}"
-                            alt="thumbnail"
-                            class="book-thumbnail"
-                        />
-                    </div>
-                    <br>
-                    <br>
-                    <td>
-                        <p class="book-name">{{ book.id }}<br></p>
-                    <br>
-                    </td>
-                    <br>
-                    <td>
-                        <p class="book-name"> {{ book.name }}</p>
-                    </td>
-                    <br>
-                    <td>
-                        <p class="book-name"> {{ book.description }}</p>
-                    </td>
-                    <td>
-                        <p class="book-name">Edit:</p>
-                    </td>
-                </tr>
-            </div>
-        </div>    
-    </table>
-</div> -->
-
-
 <ul>
     <li *ngFor="let book of books">
         <a>
@@ -63,6 +8,8 @@
                     {{ book.name }} <br>
                     {{ book.author }} <br> 
                     {{ book.price|currency }} <br>
+                    {{ book.pages }} <br>
+                    {{ book.category }} <br>
                     <star-rating 
                     [value]="book.starRating" 
                     [totalstars]="5" 

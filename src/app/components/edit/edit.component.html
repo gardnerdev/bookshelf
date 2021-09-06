@@ -25,35 +25,35 @@
 <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="book-form">
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
       <mat-label>Id</mat-label>
-      <input matInput placeholder="Ex. id" ngModel name="id">
+      <input matInput [(ngModel)]="book.id" name="id" type="number" required>
     </mat-form-field>
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
       <mat-label>Title</mat-label>
-      <textarea matInput placeholder="Ex. Title.." ngModel name="name"></textarea>
+      <textarea matInput placeholder="Ex. Title.." [ngModel]="book.name" name="name" required></textarea>
     </mat-form-field>
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
         <mat-label>Author</mat-label>
-        <textarea matInput placeholder="Ex. Author" ngModel name="author"></textarea>
+        <textarea matInput placeholder="Ex. Author" [ngModel]="book.author" name="author" required></textarea>
     </mat-form-field>
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
         <mat-label>Description</mat-label>
-        <textarea matInput placeholder="Description" ngModel name="description"></textarea>
+        <textarea matInput placeholder="Description" [ngModel]="book.description" name="description" required></textarea>
     </mat-form-field>
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
         <mat-label>Price</mat-label>
-        <textarea matInput placeholder="Ex. Author" ngModel name="price"></textarea>
+        <textarea matInput placeholder="Ex. Author" [ngModel]="book.price" name="price" required></textarea>
     </mat-form-field>
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
         <mat-label>Image url</mat-label>
-        <textarea matInput placeholder="Image url" ngModel name="imageUrl"></textarea>
+        <textarea matInput placeholder="Image url" [ngModel]="book.imageUrl"  name="imageUrl" required></textarea>
     </mat-form-field>
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
         <mat-label>Rating</mat-label>
-        <textarea matInput placeholder="Ex. Author" ngModel name="starRating"></textarea>
+        <textarea matInput placeholder="Ex. Author" [ngModel]="book.starRating"  name="starRating" required></textarea>
     </mat-form-field>
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
         <mat-label>Pages</mat-label>
-        <textarea matInput placeholder="Ex. Author" ngModel name="pages"></textarea>
+        <textarea matInput placeholder="Ex. Author" [ngModel]="book.pages" name="pages" required></textarea>
     </mat-form-field>
     <button type="submit" class="button">Save</button>
 </form>

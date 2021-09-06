@@ -10,17 +10,35 @@ import { BookService } from 'src/app/services/book.service';
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.scss']
 })
+
 export class EditComponent implements OnInit {
   id!: number;
   header!: string;
+  book: Book = {
+    id: 0,
+    name: '',
+    author: '',
+    description: '',
+    imageUrl: '',
+    starRating: 0,
+    price: 0,
+    pages: 0,
+    category: ''
+  };
 
   constructor(private router: Router, private route: ActivatedRoute, private bookSerivce: BookService) { }
 
 
   ngOnInit(): void {
-    this.id = +!this.route.snapshot.paramMap.get('id'); //converting to number
+    this.id = +<number><unknown>this.route.snapshot.paramMap.get('id'); //converting to number
     this.header = this.id === 0? 'Add book': 'Edit book';
-
+    
+    console.log("This id:" + this.id);
+    if (this.id != 0){
+      this.book =  <Book>this.bookSerivce.onGetBook(this.id);
+      console.log("Warunek kurwa spełniony!");
+    }
+    console.log(this.bookSerivce.onGetBook(this.id));
   }
 
   onSubmit(form: NgForm) {
@@ -32,10 +50,15 @@ export class EditComponent implements OnInit {
       price: form.value.price,
       imageUrl: form.value.imageUrl,
       starRating: form.value.starRating,
-      pages: form.value.pages
+      pages: form.value.pages,
+      category: form.value.category
     }
 
-    this.bookSerivce.onAdd(book);
+    if (this.id === 0){
+      this.bookSerivce.onAdd(book);
+    } else{
+      this.bookSerivce.onUpdate(book);
+    }
     this.router.navigateByUrl('');
   }
 }
