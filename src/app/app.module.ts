@@ -4,17 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
 import { GaugeModule } from 'angular-gauge';
 import { HttpClientModule } from '@angular/common/http';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSelectModule} from '@angular/material/select';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { RatingModule } from 'ng-starrating';
 import { EditComponent } from './components/edit/edit.component';
-
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,8 @@ import { EditComponent } from './components/edit/edit.component';
     MatSelectModule,
     MatTabsModule,
     GaugeModule.forRoot(),
-    RatingModule
+    RatingModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

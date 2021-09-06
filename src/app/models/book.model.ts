@@ -3,7 +3,7 @@ export class Book {
     name!: string;
     author!: string;
     description!: string;
-    image_url!: string;
+    imageUrl!: string;
     starRating!: number;
     price!: number;
     pages!: number;

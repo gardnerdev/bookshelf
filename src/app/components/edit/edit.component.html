@@ -1,1 +1,60 @@
-<p>edit works!</p>
+<div class="book-form">
+    <span class="books-font">{{ header }}</span>
+
+
+
+<!-- <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+        <label for="">Id</label>
+        <input type="text" class="form-control" ngModel name="id">
+    </div>
+    <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" class="form-control" ngModel name="title">
+    </div>
+    <div class="form-group">
+        <label for="">Author</label>
+        <input type="text" class="form-control" ngModel name="author">
+    </div>
+    <div class="form-group">
+        <button class="button"  type="submit">Save</button>
+    </div>
+</form> -->
+
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="book-form">
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="Ex. id" ngModel name="id">
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+      <mat-label>Title</mat-label>
+      <textarea matInput placeholder="Ex. Title.." ngModel name="name"></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Author</mat-label>
+        <textarea matInput placeholder="Ex. Author" ngModel name="author"></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Description" ngModel name="description"></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Price</mat-label>
+        <textarea matInput placeholder="Ex. Author" ngModel name="price"></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Image url</mat-label>
+        <textarea matInput placeholder="Image url" ngModel name="imageUrl"></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Rating</mat-label>
+        <textarea matInput placeholder="Ex. Author" ngModel name="starRating"></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Pages</mat-label>
+        <textarea matInput placeholder="Ex. Author" ngModel name="pages"></textarea>
+    </mat-form-field>
+    <button type="submit" class="button">Save</button>
+</form>
+</div>
