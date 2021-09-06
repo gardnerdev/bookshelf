@@ -13,14 +13,17 @@ export class HomeComponent implements OnInit {
   public sort!: string;
   public books!: Book[];
   public starRating!: number;
+  category = '';
+  public filteredCategory = '';
+  public SortbyParam = 'starRating';
 
+  
   constructor(private bookService: BookService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       if(params.searchTerm){
         this.books = this.bookService.onGet().filter(book => book.name.toLowerCase().includes(params.searchTerm.toLowerCase()));
-        console.log("Noż kurwas");
       }
       else{
         this.books = this.bookService.onGet()
@@ -30,5 +33,14 @@ export class HomeComponent implements OnInit {
 
   onDelete(id: number) {
     this.bookService.onDelete(id);
+  }
+
+  onCategoryFilter(){
+    this.filteredCategory = this.category;
+  }
+
+  onCategoryFilterClear(){
+    this.filteredCategory = '';
+    this.category = '';
   }
 }

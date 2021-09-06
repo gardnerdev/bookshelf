@@ -36,7 +36,6 @@ export class EditComponent implements OnInit {
     console.log("This id:" + this.id);
     if (this.id != 0){
       this.book =  <Book>this.bookSerivce.onGetBook(this.id);
-      console.log("Warunek kurwa spełniony!");
     }
     console.log(this.bookSerivce.onGetBook(this.id));
   }

@@ -14,6 +14,7 @@ export class SearchBarComponent implements OnInit {
   public sort!: string;
   public books!: Book[];
   public starRating!: number;
+  category = '';
 
   searchTerm: string = "";
 

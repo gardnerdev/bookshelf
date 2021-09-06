@@ -1,16 +1,4 @@
-.filters{
-    max-width: 1200px;
-    margin: 20px auto;
-    padding-left: 10px;
-}
-
-
-
 ::ng-deep{
-    // .mat-form-field-infix {
-    //     background-color: #3f51b5;
-    // }
-
     .mat-select-value,
     .mat-select-arrow,
     .mat-form-field-hide-placeholder .mat-select-placeholder,
@@ -39,8 +27,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px;
-    margin: 20px auto;
+    max-width: 1000px;
+    // margin: 20px auto;
 }
 
 .book {
@@ -76,7 +64,7 @@
         color: rgb(255, 255, 255);
         font-weight: 590;
         font-size: 22px;
-        margin-bottom: 40px;
+        margin-bottom: 5px;
         white-space: nowrap;
         text-overflow:inherit;
         overflow: hidden;
@@ -109,3 +97,10 @@
     border-top-left-radius: 5px;
     margin: 10px;
  }
+
+
+ .left-container {
+    width: 20%;
+    margin-left:20px;
+    margin-top:10px;
+}

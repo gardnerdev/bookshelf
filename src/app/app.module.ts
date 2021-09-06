@@ -15,12 +15,16 @@ import { RatingModule } from 'ng-starrating';
 import { EditComponent } from './components/edit/edit.component';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     HomeComponent,
-    EditComponent
+    EditComponent,
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
