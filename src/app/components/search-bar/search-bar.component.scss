@@ -10,6 +10,7 @@
      top: 0;
      left: 0;
      z-index: 4;
+     vertical-align: center;
    }
 
    &-form{
@@ -50,11 +51,14 @@
 }
 
 .logo {
-   margin-left: 10px;
+   margin-left:420px;
    color: #fff;
    font-weight: 700;
    cursor: pointer;
    text-decoration: none;
+   font-size: 25px; 
+   display: inline-block;
+   vertical-align: middle;
 }
 
 
