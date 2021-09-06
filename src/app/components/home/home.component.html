@@ -53,15 +53,31 @@
 </div> -->
 
 
-
 <ul>
     <li *ngFor="let book of books">
         <a>
-            <img src="{{book.image_url}}" alt="">
-            <div class="content">
-                <div class="book-name">
+            <div class="books">
+                <div class="book">
+                    <img src="{{book.image_url}}" alt="thumbnail" class="book-thumbnail">
+                    <p class="book-name">
                     {{ book.name }} <br>
-                    {{ book.description }} <br>
+                    {{ book.author }} <br> 
+                    {{ book.price|currency }} <br>
+                    <star-rating 
+                    [value]="book.starRating" 
+                    [totalstars]="5" 
+                    checkedcolor="red" 
+                    uncheckedcolor="black" 
+                    size="24px" 
+                    [readonly]="true">
+                    </star-rating>
+                    </p>
+                    <div class="book-description">
+                        {{ book.description }}
+                    </div>
+                    <div class="book-footer">
+                        <button class="button" [routerLink]="['book/edit',book.id]">Edit</button>
+                    </div>
                 </div>
             </div>
         </a>

@@ -10,6 +10,7 @@ import { BookService } from 'src/app/services/book.service';
 export class HomeComponent implements OnInit {
   public sort!: string;
   public books!: Book[];
+  public starRating!: number;
 
   constructor(private bookService: BookService) { }
 

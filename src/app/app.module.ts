@@ -12,12 +12,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
+import { RatingModule } from 'ng-starrating';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    HomeComponent
+    HomeComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { HomeComponent } from './components/home/home.component';
     MatIconModule,
     MatSelectModule,
     MatTabsModule,
-    GaugeModule.forRoot()
+    GaugeModule.forRoot(),
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

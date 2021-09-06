@@ -34,6 +34,7 @@
     }
 }
 
+
 .books{
     display: flex;
     flex-wrap: wrap;
@@ -43,64 +44,71 @@
 }
 
 .book {
-    width: 280px;
+    width: 370px;
     margin: 10px;
-    height: 330px;
+    height: 470px;
     overflow: hidden;
     border-radius: 5px;
     background-color: #202020;
     box-shadow: 4px 3px 8px 0px rgb(200 154 44);
     transition-duration: 0.3s;
     cursor: pointer;
+    text-align: center;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden; 
 
     &:hover {
-        box-shadow: 4px 3px 11px 6px rbg(200 152 44);
-        transform: translateY(-3px);
+      box-shadow: 4px 3px 1px 6px rbg(200 152 44);
+      transform: translateY(-3px);
     }
 
-    &-thumb-container{
-        background-color: #000;
-        position: relative;
-        height: 172px;
-        color: #fff;
-        text-align: center;
-    }
 
     &-thumbnail{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        display: inline-block;
+        position: relative;
         margin: 0 auto;
-        height: 172px;
-        width: 180px;
-    }
-
-    &-description {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        height: 157px;
+        height: 230px;
     }
 
     &-name{
-        color: #fff;
-        font-weight: 700;
+        padding: 2%;
+        color: rgb(255, 255, 255);
+        font-weight: 590;
         font-size: 22px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         white-space: nowrap;
-        text-overflow: ellipsis;
+        text-overflow:inherit;
         overflow: hidden;
     }
 
-    &-categories {
-        display: flex;
+    &-description{
+        color: rgb(255, 255, 255);
+        font-size: 10px;
+        text-overflow:unset;
+        overflow: hidden;
+        white-space: initial;
+        height: 50px;
+        position:relative;
     }
 
-    &category {
-        width: 20px;
+    &-footer{
+        position: relative;
+        display: block;
+        height:50px;
+        text-align: center;
+        // margin-bottom: 1px;
+        // background-color: #3f51b5;
     }
 }
 
 
+.button{
+    border-left: 1px solid rgba(0,0,0,0.3);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+ }

@@ -4,4 +4,7 @@ export class Book {
     author!: string;
     description!: string;
     image_url!: string;
+    starRating!: number;
+    price!: number;
+    pages!: number;
 }
