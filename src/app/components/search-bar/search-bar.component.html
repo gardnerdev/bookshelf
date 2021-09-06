@@ -3,12 +3,13 @@
         <span class="logo" routerLink="/">Bookshelf</span>
         <input
             class="search-input"
+            [(ngModel)]="searchTerm"
+            (change)="search()"
+            placeholder="Search title of 500,000+ books"
             name="search"
-            ngModel
-            placeholder="Search 500,000+ books"
         />
 
-        <button class="search-button">Search</button>
+        <button class="search-button" (click)="search()">Search</button>
     </form>
     <button class="button" routerLink="book/add/0">Add Book</button>
 </div>

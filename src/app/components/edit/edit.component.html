@@ -4,7 +4,7 @@
 <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="book-form">
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
       <mat-label>Id</mat-label>
-      <input matInput [(ngModel)]="book.id" name="id" type="number" required>
+      <input matInput [(ngModel)]="book.id" name="id" type="number" readonly>
     </mat-form-field>
     <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
       <mat-label>Title</mat-label>
