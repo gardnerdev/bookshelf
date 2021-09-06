@@ -77,7 +77,7 @@
                     </div>
                     <div class="book-footer">
                         <button class="button" [routerLink]="['book/edit',book.id]">Edit</button>
-                        <button class="button" [routerLink]="['book/edit',book.id]">Delete</button>
+                        <button class="button" (click)="onDelete(book.id)">Delete</button>
                     </div>
                 </div>
             </div>

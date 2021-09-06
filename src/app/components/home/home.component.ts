@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.books = this.bookService.onGet()
   }
+
+  onDelete(id: number) {
+    this.bookService.onDelete(id);
+  }
 }

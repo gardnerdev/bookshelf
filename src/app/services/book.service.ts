@@ -42,4 +42,10 @@ export class BookService {
     this.books.push(book);
   }
 
+  onDelete(id: number){
+    // looking for book to delete
+    let book = <Book>this.books.find(x=>x.id === id);
+    let index = this.books.indexOf(book,0);
+    this.books.splice(index,1);
+  }
 }
