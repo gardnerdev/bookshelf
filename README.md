@@ -1,11 +1,13 @@
 # Bookshelf
 
-(!home)[home.png]
 # Description
 Project to learn angular framework. 
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+
+
+![home](home.png)
 
 ## Development server
 
