@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+body { 
+    font-family: Roboto, 
+    "Helvetica Neue", sans-serif; 
+    padding-top: 60px;
+    height: 100%;
+    background-color: rgb(44, 41, 41);
+}   
+
+body * {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 1%;
+}
+
+
+
+.button {
+    border: none;
+    outline: none;
+    background: #3f51b5;
+    padding: 10px;
+    color: #fff;
+    font-weight: 700;
+    transition-duration: 0.3s;
+    cursor: pointer;
+ 
+    &:hover {
+        color: #3f51b5;
+        background-color: #fff;
+        border: 1px solid #3f51b5;
+    }
+}
+ 
+.books-font {
+    padding: 2%;
+    color: rgb(255, 255, 255);
+    font-weight: 590;
+    font-size: 20px;
+    margin-bottom: 40px;
+    white-space: nowrap;
+    text-overflow:inherit;
+    overflow: hidden;
+}
+

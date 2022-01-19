@@ -1,0 +1,44 @@
+<div class="container">
+<div class="book-form">
+    <span class="books-font">{{ header }}</span>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="book-form">
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+      <mat-label>Id</mat-label>
+      <input matInput [(ngModel)]="book.id" name="id" type="number" readonly>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+      <mat-label>Title</mat-label>
+      <textarea matInput placeholder="Ex. Title.." maxlength="15" [ngModel]="book.name" name="name" required></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Author</mat-label>
+        <textarea matInput placeholder="Ex. Author" maxlength="15" [ngModel]="book.author" name="author" required></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Description" maxlength="100" [ngModel]="book.description" name="description" required></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Category</mat-label>
+        <textarea matInput placeholder="Drama,history,romance,lifestyle..." maxlength="15" [ngModel]="book.category" name="category" required></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" min=1 [ngModel]="book.price" name="price" required>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Image url</mat-label>
+        <textarea matInput placeholder="Image url" [ngModel]="book.imageUrl"  name="imageUrl" required></textarea>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Rating</mat-label>
+        <input matInput type="number" min=0 max=5 [ngModel]="book.starRating"  name="starRating" required>
+    </mat-form-field>
+    <mat-form-field class="book-form-full-width" floatLabel="always" appearance="fill">
+        <mat-label>Pages</mat-label>
+        <input matInput type="number" min=1 placeholder="Number of pages" [ngModel]="book.pages" name="pages" required>
+    </mat-form-field>
+    <button type="submit" class="button">Save</button>
+</form>
+</div>
+</div>

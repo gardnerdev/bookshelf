@@ -1,0 +1,14 @@
+<div class="search-container">
+    <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <input
+            class="search-input"
+            [(ngModel)]="searchTerm"
+            (change)="search()"
+            placeholder="Search title of 500,000+ books"
+            name="search"
+        />
+        <button class="search-button" (click)="search()">Search</button>
+        <span class="align-center logo" routerLink="/">Bookshelf</span>
+    </form>
+    <button class="button" routerLink="book/add/0">Add Book</button>
+</div>
