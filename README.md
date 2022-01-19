@@ -3,13 +3,12 @@
 # Description
 Project which combines `angular framework` && `python fastapi` backend and `docker` technology.
 
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
-
-
 ![home](home.png)
 
 # Frontend
+
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
 ## Development server
 
@@ -25,3 +24,25 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 # Setup
 
+1. create `.env` file and fill it in (env-template)
+2. add volume permissions to run `pgadmin`
+
+
+```
+sudo chown -R 5050:5050 volumes/pgadmin
+```
+
+3. 
+```
+docker-compose up
+```
+
+
+4. go to localhost:80 and configure connection to local postgres db:
+```
+host: localhost
+port: 5432
+maintenance db: postgres
+username: POSTGRES_PASSWORD (from .env)
+password: POSTGRES_USER (from .env)
+```
