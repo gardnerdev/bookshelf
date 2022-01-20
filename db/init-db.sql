@@ -5,7 +5,7 @@ CREATE SCHEMA public;
 
 
 CREATE TYPE rating_type as ENUM('0', '1', '2', '3', '4', '5');
-CREATE TYPE category_type as ENUM('drama', 'history', 'romance', 'lifestyle', 'business', 'gardnening');
+CREATE TYPE category_type as ENUM('drama', 'history', 'romance', 'lifestyle', 'business', 'gardening');
 
 CREATE TABLE IF NOT EXISTS books (
     id SERIAL PRIMARY KEY,
@@ -16,5 +16,5 @@ CREATE TABLE IF NOT EXISTS books (
     image_url VARCHAR (255),
     rating rating_type,
     caregory category_type,
-    pages INT    
+    pages INT
 );
