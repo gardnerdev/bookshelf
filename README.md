@@ -15,13 +15,13 @@ Project which combines `angular framework` && `python fastapi` backend and `dock
 sudo chown -R 5050:5050 volumes/pgadmin
 ```
 
-3.
+3. Run docker compose
 ```
 docker-compose up
 ```
 
 
-4. go to localhost:80 and configure connection to local postgres db:
+4. go to `localhost:80` and configure connection to local postgres db:
 ```
 host: localhost
 port: 5432
@@ -47,9 +47,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 # Backend
 
-Create virtualenv
-
-
+1. Create virtualenv
+2. Install packages `pip3 install -r requirements.txt`
+3. Run command:
 ```
 uvicorn main:app --reload --port 8080
 ```
