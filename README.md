@@ -5,8 +5,6 @@ Project which combines `angular framework` && `python fastapi` backend and `dock
 
 ![home](home.png)
 
-# Backend
-
 # Setup
 
 1. create `.env` file and fill it in (env-template)
@@ -17,7 +15,7 @@ Project which combines `angular framework` && `python fastapi` backend and `dock
 sudo chown -R 5050:5050 volumes/pgadmin
 ```
 
-3. 
+3.
 ```
 docker-compose up
 ```
@@ -44,3 +42,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+
+
+# Backend
+
+Create virtualenv
+
+
+```
+uvicorn main:app --reload --port 8080
+```
